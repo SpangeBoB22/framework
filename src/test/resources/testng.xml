@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tests">
+    <listeners>
+        <listener class-name="io.TestListener" />
+    </listeners>
+    <test name="REST API test">
+        <classes>
+            <class name="io.RestApiTest" />
+        </classes>
+    </test>
+
+    <test name="WebTest chrome">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="io.WebTest" />
+        </classes>
+    </test>
+    <test name="WebTest firefox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="io.WebTest" />
+        </classes>
+    </test>
+</suite>
